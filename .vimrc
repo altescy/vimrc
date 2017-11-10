@@ -128,6 +128,12 @@ NeoBundle 'suy/vim-ctrlp-commandline'
 " 構文エラーチェック
 NeoBundle 'scrooloose/syntastic'
 
+" Rust
+NeoBundle 'rust-lang/rust.vim'
+
+" Scala
+NeoBundle 'derekwyatt/vim-scala'
+
 "----------------------------------------------------------
 call neobundle#end()
 
