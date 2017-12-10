@@ -1,4 +1,5 @@
 # vimrc
 ## Installation
-    git clone https://github.com/altescy/vimrc ~/.vimconf
-    ln -s ~/.vimconf/.vimrc ~/.vimrc
+```bash
+curl -fsSL https://raw.githubusercontent.com/altescy/vimrc/master/.vimrc > ~/.vimrc
+```
