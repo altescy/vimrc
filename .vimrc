@@ -5,7 +5,7 @@ scriptencoding utf-8
 set fileencoding=utf-8 " 保存時の文字コード
 set fileencodings=ucs-boms,utf-8,euc-jp,cp932 " 読み込み時の文字コードの自動判別. 左側が優先される
 set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
-set ambiwidth=double " □や○文字が崩れる問題を解決
+set ambiwidth=single" □や○文字が崩れる問題を解決
 
 
 set expandtab " タブ入力を複数の空白入力に置き換える
@@ -128,11 +128,24 @@ NeoBundle 'suy/vim-ctrlp-commandline'
 " 構文エラーチェック
 NeoBundle 'scrooloose/syntastic'
 
-" Rust
+" rust lang
 NeoBundle 'rust-lang/rust.vim'
 
-" Scala
+" scala
 NeoBundle 'derekwyatt/vim-scala'
+
+" vim-airline
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+
+" powerline for vim
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+
+" git for vim
+NeoBundle 'tpope/vim-fugitive'
+
+" NERD Tree
+NeoBundle 'scrooloose/nerdtree'
 
 "----------------------------------------------------------
 call neobundle#end()
@@ -160,9 +173,9 @@ syntax enable " 構文に色を付ける
 " ステータスラインの設定
 "----------------------------------------------------------
 set laststatus=2 " ステータスラインを常に表示
-set showmode " 現在のモードを表示
-set showcmd " 打ったコマンドをステータスラインの下に表示
-set ruler " ステータスラインの右側にカーソルの現在位置を表示する
+" set showmode " 現在のモードを表示
+" set showcmd " 打ったコマンドをステータスラインの下に表示
+" set ruler " ステータスラインの右側にカーソルの現在位置を表示する
 
 
 "----------------------------------------------------------
@@ -180,8 +193,6 @@ command! CtrlPCommandLine call ctrlp#init(ctrlp#commandline#id())
 let g:ctrlp_funky_matchtype = 'path'
 
 
-
-
 "----------------------------------------------------------
 " Syntasticの設定
 "----------------------------------------------------------
@@ -196,4 +207,17 @@ let g:syntastic_check_on_open = 1
 " 「:wq」で終了する時も構文エラーチェックする
 let g:syntastic_check_on_wq = 1
 
+
+"----------------------------------------------------------
+" vim-airlineの設定
+"----------------------------------------------------------
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 1
+let g:airline_theme = 'papercolor'
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 
