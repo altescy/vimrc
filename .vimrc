@@ -100,22 +100,26 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------------------
 " ここに追加したいVimプラグインを記述する・・・・・・②
 
-
 " カラースキームmolokai
 NeoBundle 'tomasr/molokai'
 
-
 " ステータスラインの表示内容強化
-NeoBundle 'itchyny/lightline.vim'
-
+" NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 
 " 末尾の全角と半角の空白文字を赤くハイライト
 NeoBundle 'bronson/vim-trailing-whitespace'
 
-
 " インデントの可視化
 NeoBundle 'Yggdroot/indentLine'
 
+" 構文エラーチェック
+NeoBundle 'scrooloose/syntastic'
+
+" langs
+NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'derekwyatt/vim-scala'
 
 " 多機能セレクタ
 NeoBundle 'ctrlpvim/ctrlp.vim'
@@ -124,28 +128,12 @@ NeoBundle 'tacahiroy/ctrlp-funky'
 " CtrlPの拡張プラグイン. コマンド履歴検索
 NeoBundle 'suy/vim-ctrlp-commandline'
 
-
-" 構文エラーチェック
-NeoBundle 'scrooloose/syntastic'
-
-" rust lang
-NeoBundle 'rust-lang/rust.vim'
-
-" scala
-NeoBundle 'derekwyatt/vim-scala'
-
-" vim-airline
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-
-" powerline for vim
-NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
-
 " git for vim
 NeoBundle 'tpope/vim-fugitive'
 
 " NERD Tree
 NeoBundle 'scrooloose/nerdtree'
+
 
 "----------------------------------------------------------
 call neobundle#end()
