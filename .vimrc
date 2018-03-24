@@ -134,6 +134,8 @@ NeoBundle 'tpope/vim-fugitive'
 " NERD Tree
 NeoBundle 'scrooloose/nerdtree'
 
+" julia-vim
+NeoBundle 'JuliaEditorSupport/julia-vim'
 
 "----------------------------------------------------------
 call neobundle#end()
