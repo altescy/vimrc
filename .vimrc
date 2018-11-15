@@ -203,7 +203,7 @@ let g:syntastic_check_on_wq = 1
 "----------------------------------------------------------
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
+" let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
 let g:airline_theme = 'powerlineish'
 
@@ -211,3 +211,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
+
+map <C-n> :NERDTreeToggle<CR>
+nmap <C-j> <Plug>AirlineSelectPrevTab
+nmap <C-k> <Plug>AirlineSelectNextTab
